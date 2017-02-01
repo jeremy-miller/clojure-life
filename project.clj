@@ -3,7 +3,8 @@
   :url "https://github.com/jeremy-miller/life-clojure"
   :license {:name "MIT License"
             :url "https://github.com/jeremy-miller/life-clojure/blob/master/LICENSE"}
-  :dependencies [[org.clojure/clojure "1.8.0"]]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [net.mikera/core.matrix "0.57.0"]]
   :main ^:skip-aot life-clojure.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
