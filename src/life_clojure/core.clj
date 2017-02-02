@@ -13,9 +13,9 @@
 (defn- get-living-neighbors
   [row column cell-value board]
   (let [row-start (max (- row 1) 0)
-        row-length (if (or (= row 0) (= row (- max-rows 1)) 2 3))  ;; subtract 1 from max-rows because it's 1-indexed
+        row-length (if (or (= row 0) (= row (- max-rows 1))) 2 3)  ;; subtract 1 from max-rows because it's 1-indexed
         column-start (max (- column 1) 0)
-        column-length (if (or (= column 0) (= column (- max-columns 1)) 2 3))]  ;; subtract 1 from max-columns because it's 1-indexed
+        column-length (if (or (= column 0) (= column (- max-columns 1))) 2 3)]  ;; subtract 1 from max-columns because it's 1-indexed
     (- (esum (submatrix board row-start row-length column-start column-length)) cell-value)))
 
 (defn- evolve
