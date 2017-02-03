@@ -17,7 +17,7 @@
                                                                                    [4 21] [4 22] [4 35] [4 36] [5 1] [5 2] [5 11] [5 17] [5 21] [5 22] [6 1]
                                                                                    [6 2] [6 11] [6 15] [6 17] [6 18] [6 23] [6 25] [7 11] [7 17] [7 25] [8 12]
                                                                                    [8 16] [9 13] [9 14]]}})
-(def configuration-name "gosper-glider-gun")
+(def configuration-name "blinker")
 (def max-rows (get-in configuration [configuration-name :max-rows]))
 (def max-columns (get-in configuration [configuration-name :max-columns]))
 
@@ -45,7 +45,7 @@
   "Print board"
   [board]
   (doseq [row board]
-    (println (string/join " " row)))
+    (println (string/join " " (map #(if (= % 0) "." "O") row))))
   (println))  ; add empty line between boards
 
 (defn- get-initial-board
