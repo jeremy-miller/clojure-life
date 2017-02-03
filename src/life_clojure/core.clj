@@ -55,6 +55,7 @@
   (let [initial-board (get-initial-board (get-in config/configuration [configuration-name :live-cells]))]
     (println "Starting Conway's Game of Life...\n")
     (print-board initial-board)
+    (Thread/sleep 1000)
     (loop [board initial-board]
       (let [updated-board (matrix/emap-indexed #(evolve %1 %2 board) board)]
         (print-board updated-board)
