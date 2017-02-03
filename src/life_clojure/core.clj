@@ -19,10 +19,10 @@
      cell-value (integer): The value of the current cell being evolved (0 or 1).
      board (2D matrix): The current iteration of the board."
   [row column cell-value board]
-  (let [row-start (max (- row 1) 0)
-        row-length (if (or (= row 0) (= row (- max-rows 1))) 2 3)  ; Subtract 1 from max-rows because it's 1-indexed.
-        column-start (max (- column 1) 0)
-        column-length (if (or (= column 0) (= column (- max-columns 1))) 2 3)]  ; Subtract 1 from max-columns because it's 1-indexed.
+  (let [row-start (max (dec row) 0)
+        row-length (if (or (zero? row) (= row (dec max-rows))) 2 3)  ; Subtract 1 from max-rows because it's 1-indexed.
+        column-start (max (dec column) 0)
+        column-length (if (or (zero? column) (= column (dec max-columns))) 2 3)]  ; Subtract 1 from max-columns because it's 1-indexed.
     (- (matrix/esum (matrix/submatrix board row-start row-length column-start column-length)) cell-value))) ; Subtract the current cell-value to only get cell neighbors.
 
 (defn- evolve
@@ -48,7 +48,7 @@
      board (2D matrix): The board to be printed."
   [board]
   (doseq [row board]
-    (println (string/join " " (map #(if (= % 0) "." "O") row))))
+    (println (string/join " " (map #(if (zero? %) "." "O") row))))
   (println))  ; Add empty line between boards.
 
 (defn- get-initial-board

@@ -7,4 +7,5 @@
                  [net.mikera/core.matrix "0.57.0"]]
   :main ^:skip-aot life-clojure.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}
+             :dev {:plugins [[lein-kibit "0.1.3"]]}})
