@@ -10,5 +10,8 @@ To interact with the Life game, follow the steps below.
 - [OpenJDK 1.8](http://openjdk.java.net/)
 - [Leiningen](https://leiningen.org/) - for running tests, etc
 
+### Static Code Analyzer
+To run [kibit](https://github.com/jonase/kibit) static code analyzer, execute the following command: ```lein kibit```
+
 ### Run
 To run the Life game, execute the following command: ```java -jar target/uberjar/life-clojure-0.1.0-SNAPSHOT-standalone.jar```
