@@ -11,7 +11,13 @@
 (def ^:private max-columns (get-in config/configuration [configuration-name :max-columns]))
 
 (defn- get-living-neighbors
-  "Calculate number of living neighbors of cell in current board."
+  "Calculate number of living neighbors of a cell in current board.
+
+   Args:
+     row (integer): The current cell's row index.
+     column (integer): The current cell's column index.
+     cell-value (integer): The value of the current cell being evolved (0 or 1).
+     board (2D matrix): The current iteration of the board."
   [row column cell-value board]
   (let [row-start (max (- row 1) 0)
         row-length (if (or (= row 0) (= row (- max-rows 1))) 2 3)  ; Subtract 1 from max-rows because it's 1-indexed.
@@ -20,7 +26,12 @@
     (- (matrix/esum (matrix/submatrix board row-start row-length column-start column-length)) cell-value))) ; Subtract the current cell-value to only get cell neighbors.
 
 (defn- evolve
-  "Calculate and return correct value of a cell based on neighbors."
+  "Calculate and return correct value of a cell based on neighbors.
+
+   Args:
+     [row column] (vector of integers): The current row and column of the cell being evolved.
+     cell-value (integer): The value of the current cell being evolved (0 or 1).
+     board (2D matrix): The current iteration of the board."
   [[row column] cell-value board]
   (let [live-neighbors (get-living-neighbors row column cell-value board)]
     (if (= cell-value 1)  ; Cell is currently living.
@@ -31,14 +42,20 @@
       (if (= live-neighbors 3) 1 0))))  ; Rule 4
 
 (defn- print-board
-  "Print current iteration of board."
+  "Print current iteration of board.
+
+   Args:
+     board (2D matrix): The board to be printed."
   [board]
   (doseq [row board]
     (println (string/join " " (map #(if (= % 0) "." "O") row))))
   (println))  ; Add empty line between boards.
 
 (defn- get-initial-board
-  "Build and return the initial board."
+  "Build and return the initial board.
+
+   Args:
+     live-cells (vector of vectors): The row and column index of all initial living cells for this 'configuration-name'."
   [live-cells]
   (let [board (matrix/matrix (make-array Integer/TYPE max-rows max-columns))]  ; Build board filled with 0s, must cast array to matrix for 'assoc-in' below.
     (reduce (fn [new-board [row column]] (assoc-in new-board [row column] 1)) board live-cells)))  ; Set 1 at all locations of 'live-cells'.
