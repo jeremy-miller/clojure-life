@@ -5,10 +5,10 @@
   (:gen-class))
 
 ; Options: "blinker" "glider" "toad" "pulsar" "pentadecathlon" "lightweight-spaceship" "gosper-glider-gun"
-(def ^:private configuration-name "blinker")
+(def ^:private configuration-name "Name of the starting configuration." "blinker")
 
-(def ^:private max-rows (get-in config/configuration [configuration-name :max-rows]))
-(def ^:private max-columns (get-in config/configuration [configuration-name :max-columns]))
+(def ^:private max-rows "The maximum number of rows in the board for this configuration." (get-in config/configuration [configuration-name :max-rows]))
+(def ^:private max-columns "The maximum number of columns in the board for this configuration." (get-in config/configuration [configuration-name :max-columns]))
 
 (defn- get-living-neighbors
   "Calculate number of living neighbors of a cell in current board.

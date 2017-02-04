@@ -8,4 +8,5 @@
   :main ^:skip-aot life-clojure.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
-             :dev {:plugins [[lein-kibit "0.1.3"]]}})
+             :dev {:plugins [[jonase/eastwood "0.2.3"]
+                             [lein-kibit "0.1.3"]]}})
