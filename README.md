@@ -14,6 +14,9 @@ To interact with the Life game, follow the steps below.
 ### Setup
 Before interacting with the Life game, the Docker container must be built: ```docker build -t jeremymiller/life-clojure .```
 
+### Configuration
+To configure the Life game, modify the ```configuration-name``` variable in *src/life_clojure/core.clj*.
+
 ### Static Code Analysis
 To run *check*, [kibit](https://github.com/jonase/kibit), and [eastwood](https://github.com/jonase/eastwood) static code analyzers,
 execute the following command: ```docker run -it --rm jeremymiller/life-clojure lein with-profile dev check && lein with-profile dev kibit && lein with-profile dev eastwood```
