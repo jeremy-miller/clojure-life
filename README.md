@@ -18,5 +18,8 @@ Before interacting with the Life game, the Docker container must be built: ```do
 To run *check*, [kibit](https://github.com/jonase/kibit), and [eastwood](https://github.com/jonase/eastwood) static code analyzers,
 execute the following command: ```docker run -it --rm jeremymiller/life-clojure lein with-profile dev check && lein with-profile dev kibit && lein with-profile dev eastwood```
 
+### Build Standalone Jar File
+To build a standalone jar file, execute the following command: ```docker run -it --rm jeremymiller/life-clojure lein uberjar```
+
 ### Run
-To run the Life game, execute the following command: ```java -jar target/uberjar/life-clojure-0.1.0-SNAPSHOT-standalone.jar```
+To run the Life game, execute the following command: ```docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app jeremymiller/life-clojure java -jar /usr/src/app/target/uberjar/life-clojure-1.0-standalone.jar```

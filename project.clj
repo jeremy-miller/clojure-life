@@ -1,4 +1,4 @@
-(defproject jeremy-miller/life-clojure "0.1.0-SNAPSHOT"
+(defproject jeremy-miller/life-clojure "1.0"
   :description "Conway's Game of Life"
   :url "https://github.com/jeremy-miller/life-clojure"
   :license {:name "MIT License"
