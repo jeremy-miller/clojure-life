@@ -10,7 +10,7 @@ Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/
 ## Usage
 To interact with the Life game, follow the steps below.
 
-*NOTE: This game has only been tested using OpenJDK 1.8 on Ubuntu 16.10.*
+*NOTE: This game has only been tested on Ubuntu 16.10.*
 
 ### Prerequisites
 - [Docker](https://docs.docker.com/engine/installation/linux/ubuntu/)
