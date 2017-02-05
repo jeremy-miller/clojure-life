@@ -1,0 +1,7 @@
+language: clojure
+script:
+  - lein with-profile dev check
+  - lein with-profile dev kibit
+  - lein with-profile dev eastwood
+  - lein with-profile dev test
+  - lein with-profile dev cloverage

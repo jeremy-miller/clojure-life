@@ -1,3 +1,5 @@
 .gitignore
 LICENSE
 README.md
+.codeclimate.yml
+.travis.yml
