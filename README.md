@@ -30,7 +30,7 @@ execute the following command: ```docker run -it --rm jeremymiller/life-clojure 
 ### Test
 To run the Life tests, execute the following command: ```docker run -it --rm jeremymiller/life-clojure lein test```
 
-To run the Life test with code coverage, execute the following command: ```docker run -it --rm jeremymiller/life-clojure lein cloverage```
+To run the Life tests with code coverage, execute the following command: ```docker run -it --rm jeremymiller/life-clojure lein cloverage```
 
 ### Build Standalone Jar File
 To build a standalone jar file, execute the following command: ```docker run -it --rm jeremymiller/life-clojure lein uberjar```
