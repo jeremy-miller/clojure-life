@@ -1,4 +1,6 @@
 language: clojure
+jdk:
+  - openjdk8
 script:
   - lein2 with-profile dev check
   - lein2 with-profile dev kibit
