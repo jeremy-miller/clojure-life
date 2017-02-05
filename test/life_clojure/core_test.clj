@@ -81,4 +81,5 @@
     (is (= (#'core/get-initial-board live-cells) board))))
 
 (deftest test-main
-  (is (= (with-out-str -main) "Starting Conway's Game of Life...\n")))
+  (let [output "Starting Conway's Game of Life...\n\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n\nThanks for playing!\n"]
+    (is (= (with-out-str (-main)) output))))
