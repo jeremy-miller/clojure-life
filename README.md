@@ -1,6 +1,6 @@
 [![Code Climate](https://codeclimate.com/github/jeremy-miller/life-clojure/badges/gpa.svg)](https://codeclimate.com/github/jeremy-miller/life-clojure)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
-[![Clojure](https://img.shields.io/badge/Clojure-1.8-blue.svg)]()
+[![Clojure](https://img.shields.io/badge/Clojure-1.8.0-blue.svg)]()
 
 # Life (in Clojure)
 Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
