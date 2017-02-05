@@ -1,7 +1,10 @@
 language: clojure
 script:
-  - lein with-profile dev check
-  - lein with-profile dev kibit
-  - lein with-profile dev eastwood
-  - lein with-profile dev test
-  - lein with-profile dev cloverage
+  - lein2 with-profile dev check
+  - lein2 with-profile dev kibit
+  - lein2 with-profile dev eastwood
+  - lein2 with-profile dev test
+after_success:
+  - COVERALLS_URL='https://coveralls.io/api/v1/jobs'
+  - lein2 cloverage -o cov --coveralls
+  - curl -F 'json_file=@cov/coveralls.json' "$COVERALLS_URL"
