@@ -13,8 +13,6 @@ To interact with the Life game, follow the steps below.
 *NOTE: This game has only been tested using OpenJDK 1.8 on Ubuntu 16.10.*
 
 ### Prerequisites
-- [OpenJDK 1.8](http://openjdk.java.net/)
-- [Leiningen](https://leiningen.org/)
 - [Docker](https://docs.docker.com/engine/installation/linux/ubuntu/)
 
 ### Setup
