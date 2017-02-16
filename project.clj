@@ -10,4 +10,5 @@
   :profiles {:uberjar {:aot :all}
              :dev {:plugins [[jonase/eastwood "0.2.3"]
                              [lein-cloverage "1.0.9"]
-                             [lein-kibit "0.1.3"]]}})
+                             [lein-kibit "0.1.3"]
+                             [pjstadig/humane-test-output "0.8.1"]]}})
