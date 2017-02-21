@@ -30,6 +30,8 @@ execute the following command: ```docker run -it --rm --volume $(pwd):/usr/src/a
 ### Test
 To run the Life tests, execute the following command: ```docker run -it --rm --volume $(pwd):/usr/src/app jeremymiller/life-clojure lein test```
 
+To automatically run the Life tests (during development), execute the following command: ```docker run -it --rm --volume $(pwd):/usr/src/app jeremymiller/life-clojure lein test-refresh```
+
 To run the Life tests with code coverage, execute the following command: ```docker run -it --rm --volume $(pwd):/usr/src/app jeremymiller/life-clojure lein cloverage```
 
 ### Build Standalone Jar File
