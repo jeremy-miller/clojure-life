@@ -2,11 +2,11 @@ language: clojure
 jdk:
   - oraclejdk8
 script:
-  - lein2 with-profile dev check
-  - lein2 with-profile dev kibit
-  - lein2 with-profile dev eastwood
-  - lein2 with-profile dev test
+  - lein2 cljfmt check
+  - lein2 check
+  - lein2 kibit
+  - lein2 eastwood
+  - lein2 test
 after_success:
-  - COVERALLS_URL='https://coveralls.io/api/v1/jobs'
   - lein2 cloverage -o cov --coveralls
-  - curl -F 'json_file=@cov/coveralls.json' "$COVERALLS_URL"
+  - curl -F 'json_file=@cov/coveralls.json' https://coveralls.io/api/v1/jobs
