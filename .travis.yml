@@ -1,12 +1,13 @@
 language: clojure
+lein: lein
 jdk:
   - oraclejdk8
 script:
-  - lein2 cljfmt check
-  - lein2 check
-  - lein2 kibit
-  - lein2 eastwood
-  - lein2 test
+  - lein cljfmt check
+  - lein check
+  - lein kibit
+  - lein eastwood
+  - lein test
 after_success:
-  - lein2 cloverage -o cov --coveralls
+  - lein cloverage -o cov --coveralls
   - curl -F 'json_file=@cov/coveralls.json' https://coveralls.io/api/v1/jobs
