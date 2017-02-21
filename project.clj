@@ -8,10 +8,7 @@
   :main ^:skip-aot life-clojure.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
-             :dev {:dependencies [[pjstadig/humane-test-output "0.8.1"]]
-                   :injections [(require 'pjstadig.humane-test-output)
-                                (pjstadig.humane-test-output/activate!)]
-                   :plugins [[com.jakemccrary/lein-test-refresh "0.18.1"]
+             :dev {:plugins [[com.jakemccrary/lein-test-refresh "0.18.1"]
                              [jonase/eastwood "0.2.3"]
                              [lein-cljfmt "0.5.6"]
                              [lein-cloverage "1.0.9"]

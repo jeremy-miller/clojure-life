@@ -23,8 +23,8 @@ Before interacting with the Life game, the Docker container must be built: ```do
 ### Configuration
 To configure the Life game, modify the ```configuration-name``` variable in *src/life_clojure/core.clj*.
 
-### Static Code Analysis
-To run [cljfmt](https://github.com/weavejester/cljfmt), *check*, [kibit](https://github.com/jonase/kibit), and [eastwood](https://github.com/jonase/eastwood) static code analyzers,
+### Automatic Code Formatting and Static Code Analysis
+To run [cljfmt](https://github.com/weavejester/cljfmt) code formatter and *check*, [kibit](https://github.com/jonase/kibit), and [eastwood](https://github.com/jonase/eastwood) static code analyzers,
 execute the following command: ```docker run -it --rm --volume $(pwd):/usr/src/app jeremymiller/life-clojure lein cljfmt fix && lein check && lein kibit && lein eastwood```
 
 ### Test
