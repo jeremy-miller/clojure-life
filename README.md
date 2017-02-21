@@ -6,8 +6,7 @@
 
 # Life (in Clojure)
 Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
-This implementation uses a Docker image to isolate the execution environment.
-The Docker Clojure [base image](https://hub.docker.com/_/clojure/) used will automatically install dependencies, as well as copy over the source code to ```/usr/src/app```.
+This implementation uses a Docker container to isolate the execution environment.
 
 ## Usage
 To interact with the Life game, follow the steps below.
