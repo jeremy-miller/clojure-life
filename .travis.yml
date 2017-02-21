@@ -3,11 +3,10 @@ lein: lein
 jdk:
   - oraclejdk8
 script:
-  - lein with-profile dev cljfmt check
-  - lein with-profile dev check
-  - lein with-profile dev kibit
-  - lein with-profile dev eastwood
-  - lein with-profile dev test
+  - lein check
+  - lein kibit
+  - lein eastwood
+  - lein test
 after_success:
-  - lein with-profile dev cloverage -o cov --coveralls
+  - lein cloverage -o cov --coveralls
   - curl -F 'json_file=@cov/coveralls.json' https://coveralls.io/api/v1/jobs
