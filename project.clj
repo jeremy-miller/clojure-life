@@ -12,5 +12,6 @@
                    :injections [(require 'pjstadig.humane-test-output)
                                 (pjstadig.humane-test-output/activate!)]
                    :plugins [[jonase/eastwood "0.2.3"]
+                             [lein-cljfmt "0.5.6"]
                              [lein-cloverage "1.0.9"]
                              [lein-kibit "0.1.3"]]}})

@@ -62,7 +62,7 @@
           row-5 4
           column-5 3
           cell-value 0
-          board [[0 1 0 1 0] [1 1 0 0 0] [0 0 0 0 0] [0 0 1 1 1][0 0 1 0 1]]]
+          board [[0 1 0 1 0] [1 1 0 0 0] [0 0 0 0 0] [0 0 1 1 1] [0 0 1 0 1]]]
       (testing " - three living neighbors"
         (is (= 1 (#'core/evolve [row-3 column-3] cell-value board))))
       (testing " - less than three living neighbors"
@@ -82,12 +82,12 @@
 
 (deftest test-main
   (let [output (str "Starting Conway's Game of Life...\n"
-                     "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
-                     "\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n"
-                     "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
-                     "\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n"
-                     "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
-                     "\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n"
-                     "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
-                     "\nThanks for playing!\n")]
+                    "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
+                    "\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n"
+                    "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
+                    "\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n"
+                    "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
+                    "\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n"
+                    "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
+                    "\nThanks for playing!\n")]
     (is (= (with-out-str (-main)) output))))
