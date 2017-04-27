@@ -8,6 +8,8 @@
 Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
 This implementation uses a Docker container to isolate the execution environment.
 
+![Usage](https://github.com/jeremy-miller/life-clojure/blob/master/usage.gif)
+
 ## Usage
 To interact with the Life game, follow the steps below.
 
