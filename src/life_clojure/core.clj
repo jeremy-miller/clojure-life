@@ -10,7 +10,7 @@
 (def ^:private max-rows "The maximum number of rows in the board for this configuration." (get-in config/configuration [configuration-name :max-rows]))
 (def ^:private max-columns "The maximum number of columns in the board for this configuration." (get-in config/configuration [configuration-name :max-columns]))
 
-(def ^:private max-iterations "Number of iterations of the life game to run." 4)
+(def ^:private max-iterations "Number of iterations of the life game to run." 5)
 
 (defn- get-living-neighbors
   "Calculate number of living neighbors of a cell in current board.
@@ -71,7 +71,7 @@
     (Thread/sleep 1000)
     (loop [board initial-board
            iteration 1]
-      (if (> iteration max-iterations)
+      (if (> iteration (- max-iterations 1)
         (println "Thanks for playing!")
         (let [updated-board (matrix/emap-indexed #(evolve %1 %2 board) board)]
           (print-board updated-board)
