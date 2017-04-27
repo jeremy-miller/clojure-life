@@ -87,7 +87,5 @@
                     "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
                     "\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n"
                     "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
-                    "\n. . . . .\n. . . . .\n. O O O .\n. . . . .\n. . . . .\n"
-                    "\n. . . . .\n. . O . .\n. . O . .\n. . O . .\n. . . . .\n"
                     "\nThanks for playing!\n")]
     (is (= (with-out-str (-main)) output))))
