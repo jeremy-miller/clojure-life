@@ -11,8 +11,6 @@ This implementation uses a Docker container to isolate the execution environment
 ## Usage
 To interact with the Life game, follow the steps below.
 
-*NOTE: This game has only been tested on Ubuntu 16.10.*
-
 ### Prerequisites
 - [Docker](https://docs.docker.com/engine/installation/linux/ubuntu/)
 
