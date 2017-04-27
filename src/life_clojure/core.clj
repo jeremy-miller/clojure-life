@@ -71,7 +71,7 @@
     (Thread/sleep 1000)
     (loop [board initial-board
            iteration 1]
-      (if (> iteration (- max-iterations 1))
+      (if (> iteration (dec max-iterations))
         (println "Thanks for playing!")
         (let [updated-board (matrix/emap-indexed #(evolve %1 %2 board) board)]
           (print-board updated-board)
