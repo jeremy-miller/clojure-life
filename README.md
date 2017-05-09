@@ -40,3 +40,9 @@ To build a standalone jar file, execute the following command: ```docker run -it
 When running the Life game, it will output the updated grid in the terminal.
 
 To run the Life game, execute the following command: ```docker run -it --rm --volume $(pwd):/usr/src/app jeremymiller/life-clojure java -jar target/uberjar/life-clojure-1.0-standalone.jar```
+
+### To Do
+1. Move to Clojure 1.9 alpha, make sure it still works
+2. Update dependencies, make sure they still work
+3. Add spec
+4. Update readme for running spec tests
