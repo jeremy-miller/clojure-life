@@ -46,3 +46,4 @@ To run the Life game, execute the following command: ```docker run -it --rm --vo
 2. Update dependencies, make sure they still work
 3. Add spec
 4. Update readme for running spec tests
+5. Use *reduce* instead of *loop*
