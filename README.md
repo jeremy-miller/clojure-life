@@ -14,7 +14,7 @@ This implementation uses a Docker container to isolate the execution environment
 To interact with the Life game, follow the steps below.
 
 ### Prerequisites
-- [Docker](https://docs.docker.com/engine/installation/linux/ubuntu/)
+- [Docker](https://docs.docker.com/engine/installation/)
 
 ### Configuration
 To configure the Life game, modify the ```configuration-name``` variable in *src/life_clojure/core.clj*.
