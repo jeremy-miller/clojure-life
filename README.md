@@ -9,6 +9,7 @@ Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/
 
 ![Usage](https://github.com/jeremy-miller/life-clojure/blob/master/usage.gif)
 
+- [Motivation](#motivation)
 - [Usage](#usage)
   - [Prerequisites](#prerequisites)
   - [Configuration](#configuration)
@@ -17,6 +18,11 @@ Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/
   - [Test](#test)
   - [Run](#run)
 - [License](#license)
+
+## Motivation
+I created this project for two reasons:
+1. Learn Clojure
+2. Compare a functional (and Lisp) implementation of Conway's Game of Life to my [object-oriented implementation](https://github.com/jeremy-miller/life-python).
 
 ## Usage
 This implementation uses a Docker container to isolate the execution environment.
