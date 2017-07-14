@@ -32,3 +32,6 @@ To run the Life tests, execute the following command: ```docker run -it --rm jer
 To run the Life game, execute the following command: ```docker run -it --rm  jeremymiller/life-clojure```
 
 When running the Life game, it will output the updated grid in the terminal.
+
+## License
+[MIT](https://github.com/jeremy-miller/life-clojure/blob/master/LICENSE)
