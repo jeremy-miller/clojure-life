@@ -9,6 +9,15 @@ Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/
 
 ![Usage](https://github.com/jeremy-miller/life-clojure/blob/master/usage.gif)
 
+- [Usage](#usage)
+  - [Prerequisites](#prerequisites)
+  - [Configuration](#configuration)
+  - [Build](#build)
+  - [Automatic Code Formatting and Static Code Analysis](#automatic-code-formatting-and-static-code-analysis)
+  - [Test](#test)
+  - [Run](#run)
+- [License](#license)
+
 ## Usage
 This implementation uses a Docker container to isolate the execution environment.
 
@@ -18,7 +27,7 @@ This implementation uses a Docker container to isolate the execution environment
 ### Configuration
 To configure the Life game, modify the ```configuration-name``` variable in *src/life_clojure/core.clj*.
 
-### Setup
+### Build
 Before interacting with the Life game, the Docker container must be built: ```docker build -t jeremymiller/life-clojure .```
 
 ### Automatic Code Formatting and Static Code Analysis
