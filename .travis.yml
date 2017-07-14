@@ -7,6 +7,5 @@ script:
   - docker run -it --rm jeremymiller/life-clojure lein omni
   - docker run -it --rm jeremymiller/life-clojure lein test
 after_success:
-  - docker run -it --rm jeremymiller/life-clojure lein cloverage -o cov --coveralls
-  - docker run -it --rm jeremymiller/life-clojure ls -la cov/
-  - docker run -it --rm jeremymiller/life-clojure curl -F 'json_file=@cov/coveralls.json' https://coveralls.io/api/v1/jobs
+  - docker run -it --rm jeremymiller/life-clojure lein cloverage -o /cov --coveralls
+  - docker run -it --rm jeremymiller/life-clojure curl -F '/cov/json_file=@cov/coveralls.json' https://coveralls.io/api/v1/jobs
