@@ -1,6 +1,5 @@
 FROM clojure:alpine
-RUN apt-get update
-RUN apt-get install -y curl
+RUN apk --no-cache add curl
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY project.clj /usr/src/app
