@@ -1,12 +1,11 @@
-language: clojure
-lein: lein
-jdk:
-  - oraclejdk8
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t jeremymiller/life-clojure .
 script:
-  - lein check
-  - lein kibit
-  - lein eastwood
-  - lein test
+  - docker run -it --rm jeremymiller/life-clojure lein omni
+  - docker run -it --rm jeremymiller/life-clojure lein test
 after_success:
-  - lein cloverage -o cov --coveralls
-  - curl -F 'json_file=@cov/coveralls.json' https://coveralls.io/api/v1/jobs
+  - docker run -it --rm jeremymiller/life-clojure lein cloverage -o cov --coveralls
+  - docker run -it --rm jeremymiller/life-clojure curl -F 'json_file=@cov/coveralls.json' https://coveralls.io/api/v1/jobs
