@@ -1,4 +1,8 @@
 sudo: required
+language: clojure
+lein: lein
+jdk:
+  - oraclejdk8
 services:
   - docker
 before_install:
@@ -7,5 +11,5 @@ script:
   - docker run -it --rm jeremymiller/life-clojure lein omni
   - docker run -it --rm jeremymiller/life-clojure lein test
 after_success:
-  - docker run -it --rm jeremymiller/life-clojure lein cloverage -o /cov --coveralls
-  - docker run -it --rm jeremymiller/life-clojure curl -F 'json_file=@/cov/coveralls.json' https://coveralls.io/api/v1/jobs
+  - lein cloverage -o cov --coveralls
+  - curl -F 'json_file=@cov/coveralls.json' https://coveralls.io/api/v1/jobs
