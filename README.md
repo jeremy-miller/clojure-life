@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/jeremy-miller/life-clojure.svg?branch=master)](https://travis-ci.org/jeremy-miller/life-clojure)
 [![Test Coverage](https://coveralls.io/repos/github/jeremy-miller/life-clojure/badge.svg?branch=master)](https://coveralls.io/github/jeremy-miller/life-clojure?branch=master)
 [![Code Climate](https://codeclimate.com/github/jeremy-miller/life-clojure/badges/gpa.svg)](https://codeclimate.com/github/jeremy-miller/life-clojure)
-[![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
+[![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jeremy-miller/life-clojure/blob/master/LICENSE)
 [![Clojure Version](https://img.shields.io/badge/Clojure-1.8.0-blue.svg)]()
 
 # Life (in Clojure)
