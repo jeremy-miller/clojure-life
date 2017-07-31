@@ -9,6 +9,8 @@ Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/
 
 ![Usage](https://github.com/jeremy-miller/life-clojure/blob/master/usage.gif)
 
+<details>
+<summary><strong>Table of Contents</strong></summary>
 - [Motivation](#motivation)
 - [Usage](#usage)
   - [Prerequisites](#prerequisites)
@@ -18,6 +20,7 @@ Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/
   - [Test](#test)
   - [Run](#run)
 - [License](#license)
+</details>
 
 ## Motivation
 I created this project for two reasons:
