@@ -11,15 +11,15 @@ Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/
 
 <details>
 <summary><strong>Table of Contents</strong></summary>
-- [Motivation](#motivation)
-- [Usage](#usage)
-  - [Prerequisites](#prerequisites)
-  - [Configuration](#configuration)
-  - [Build](#build)
-  - [Automatic Code Formatting and Static Code Analysis](#automatic-code-formatting-and-static-code-analysis)
-  - [Test](#test)
-  - [Run](#run)
-- [License](#license)
+* [Motivation](#motivation)
+* [Usage](#usage)
+  + [Prerequisites](#prerequisites)
+  + [Configuration](#configuration)
+  + [Build](#build)
+  + [Automatic Code Formatting and Static Code Analysis](#automatic-code-formatting-and-static-code-analysis)
+  + [Test](#test)
+  + [Run](#run)
+* [License](#license)
 </details>
 
 ## Motivation
