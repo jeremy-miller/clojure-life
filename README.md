@@ -11,6 +11,7 @@ Clojure implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/
 
 <details>
 <summary><strong>Table of Contents</strong></summary>
+
 * [Motivation](#motivation)
 * [Usage](#usage)
   + [Prerequisites](#prerequisites)
